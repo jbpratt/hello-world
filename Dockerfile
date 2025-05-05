@@ -3,6 +3,6 @@ WORKDIR /go/src/github.com/jbpratt/hello-world/
 COPY . .
 RUN go build -o /hello-world .
 
-FROM registry.access.redhat.com/ubi8/ubi-minimal:latest
+FROM registry.access.redhat.com/bi8/ubi-minimal:latest
 COPY --from=builder /hello-world .
 ENTRYPOINT [ "/hello-world" ]
